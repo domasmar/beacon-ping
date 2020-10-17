@@ -1,11 +1,12 @@
-const express = require('express')
+const express = require('express');
 const fs = require('fs');
 const {takePlayAndTakeScreenshot} = require("./screenshots/take");
-const app = express()
+const app = express();
+const path = require('path');
 
 const {ai} = require('./ai');
 
-const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '')
+const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '');
 
 async function updateDatabase() {
   for (const [, data] of Object.entries(DB)) {
@@ -21,7 +22,7 @@ async function updateDatabase() {
       const labelWithCar = fromCache.Labels.find(l => l.Name === 'Car');
 
       data.takenSpots = ((labelWithCar && labelWithCar.Instances) || []).length;
-      data.sourceImage = generatedImage;
+      data.image = generatedImage;
       data.imageIndex = nextIndex;
     } else {
       data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
@@ -43,14 +44,16 @@ const DB = {
     totalSpots: 100,
     takenSpots: 23,
     updatedDate: now(),
-    location: {lat: 54.679608, lng: 25.283881}
+    location: {lat: 54.679608, lng: 25.283881},
+    image:'source/trinapolio-impulsas-1.jpg'
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
     totalSpots: 42,
     takenSpots: 5,
     updatedDate: now(),
-    location: {lat: 54.682144, lng: 25.280008}
+    location: {lat: 54.682144, lng: 25.280008},
+    image:'source/trinapolio-impulsas-1.jpg'
   },
   'opera': {
     address: 'A. Vienuolio g. 1',
@@ -59,7 +62,7 @@ const DB = {
     updatedDate: now(),
     location: {lat: 54.6881731, lng: 25.2787993},
     imageIndex: 0,
-    sourceImage: 'generated/operos-ir-baleto-aikstele-19h00m28s649.jpg',
+    image: 'generated/operos-ir-baleto-aikstele-19h00m28s649.jpg',
     sources: [
       'operos-ir-baleto-aikstele-19h00m28s649',
       'operos-ir-baleto-aikstele-19h00m36s069',
@@ -70,7 +73,8 @@ const DB = {
   }
 };
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use('/source', express.static(path.join(__dirname, '../source')));
 
 app.get('/api/streets', function (req, res) {
   const response = Object.entries(DB).map(([streetSlug, data]) => {
@@ -80,12 +84,12 @@ app.get('/api/streets', function (req, res) {
       takenSpots: data.takenSpots,
       updatedDate: data.updatedDate,
       location: data.location,
-      ...(data.sourceImage && {sourceImage: data.sourceImage})
+      image: data.image,
     }
-  })
+  });
 
   res.json(response);
-})
+});
 
 app.get('/api/created_images', (req, res) => {
   res.json({createdImages, createdImagesAIs});
@@ -111,7 +115,7 @@ async function startProcessingRealTimeImage() {
   if (!running) return;
 
   try {
-    const imageInBase64 = await takePlayAndTakeScreenshot()
+    const imageInBase64 = await takePlayAndTakeScreenshot();
     const filename = await new Promise((resolve, reject) => {
       const fileName = process.env.PUBLIC_DIR + '/generated/vilnius' + '-' + now() + '.png';
       createdImages.push(fileName);
