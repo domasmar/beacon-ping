@@ -10,7 +10,7 @@ async function updateDatabase() {
 
   Object.entries(DB).forEach(([streetSlug, data]) => {
 
-    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.5) * 5)
+    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5)
 
     data.updatedDate = now();
     data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
