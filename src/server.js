@@ -8,11 +8,25 @@ const {ai} = require('./ai');
 const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '')
 
 async function updateDatabase() {
-  Object.entries(DB).forEach(([streetSlug, data]) => {
-    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5)
+  for (const [, data] of Object.entries(DB)) {
+    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5);
     data.updatedDate = now();
-    data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
-  });
+    if (typeof data.imageIndex !== 'undefined') {
+      const nextIndex = (data.imageIndex + 1) % data.sources.length;
+
+      const cacheFile = `${__dirname}/../public/generated/${data.sources[nextIndex]}.json`;
+      const generatedImage = `public/generated/${data.sources[nextIndex]}.jpg`;
+
+      const fromCache = JSON.parse(fs.readFileSync(cacheFile, {encoding: 'utf-8'}));
+      const labelWithCar = fromCache.Labels.find(l => l.Name === 'Car');
+
+      data.takenSpots = ((labelWithCar && labelWithCar.Instances) || []).length;
+      data.sourceImage = generatedImage;
+      data.imageIndex = nextIndex;
+    } else {
+      data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
+    }
+  }
 
   setTimeout(() => {
     updateDatabase(true)
@@ -37,6 +51,22 @@ const DB = {
     takenSpots: 5,
     updatedDate: now(),
     location: {lat: 54.682144, lng: 25.280008}
+  },
+  'opera': {
+    address: 'A. Vienuolio g. 1',
+    totalSpots: 20, // approx
+    takenSpots: 0,
+    updatedDate: now(),
+    location: {lat: 54.6881731, lng: 25.2787993},
+    imageIndex: 0,
+    sourceImage: 'generated/operos-ir-baleto-aikstele-19h00m28s649.jpg',
+    sources: [
+      'operos-ir-baleto-aikstele-19h00m28s649',
+      'operos-ir-baleto-aikstele-19h00m36s069',
+      'operos-ir-baleto-aikstele-19h00m42s741',
+      'operos-ir-baleto-aikstele-19h00m50s654',
+      'operos-ir-baleto-aikstele-19h00m57s731'
+    ]
   }
 };
 
@@ -50,6 +80,7 @@ app.get('/api/streets', function (req, res) {
       takenSpots: data.takenSpots,
       updatedDate: data.updatedDate,
       location: data.location,
+      ...(data.sourceImage && {sourceImage: data.sourceImage})
     }
   })
 
