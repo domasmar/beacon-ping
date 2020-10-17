@@ -14,5 +14,5 @@ const fileName = (() => {
 
 (async () => {
   const response = await ai(fileName, onlyCache)
-  return response;
+  console.log(JSON.stringify(response));
 })();
