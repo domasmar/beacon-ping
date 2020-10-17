@@ -60,7 +60,7 @@ app.get('/api/streets', function (req, res) {
 })
 
 app.get('/api/created_images', (req, res) => {
-  res.json(createdImages);
+  res.json({createdImages, createdImagesAIs});
 });
 
 app.get('/api/start', (req, res) => {
@@ -84,14 +84,18 @@ async function startProcessingRealTimeImage() {
 
   try {
     const imageInBase64 = await takePlayAndTakeScreenshot()
-    await new Promise((resolve, reject) => {
+    const filename = await new Promise((resolve, reject) => {
       const fileName = __dirname + 'public/generated/vilnius' + '-' + now() + '.png';
       createdImages.push(fileName);
       fs.writeFile(fileName, imageInBase64, 'base64', function (err) {
         if (err) reject(err);
         else resolve()
       });
-    })
+    });
+
+    const result = await ai(filename);
+
+    createdImagesAIs.push({filename, awsResult: result});
 
   } catch (e) {
     console.error(e);
@@ -103,6 +107,7 @@ async function startProcessingRealTimeImage() {
 }
 
 const createdImages = [];
+const createdImagesAIs = [];
 let running = false;
 let refreshRate = 60000;
 

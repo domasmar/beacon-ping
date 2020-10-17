@@ -1,5 +1,6 @@
 require('chromedriver');
 
+const sharp = require('sharp');
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -17,7 +18,8 @@ async function takePlayAndTakeScreenshot() {
       await driver.findElement(By.className('vjs-big-play-button')).click();
       await driver.sleep(4000);
       const image = await takeScreenshot(driver);
-      resolve(image);
+      const croppedImage = await cropImage(image);
+      resolve(croppedImage);
     } catch (e) {
       console.error(e);
       reject(e);
@@ -42,3 +44,12 @@ function takeScreenshot(driver) {
   })
 }
 
+async function cropImage(image) {
+  const buffer = Buffer.from(image, 'base64')
+  const resultBuffer = await sharp(buffer)
+      .extract({ width: 600, height: 300, left: 60, top: 40 })
+      .jpeg()
+      .toBuffer()
+
+  return Buffer.from(resultBuffer).toString('base64')
+}
