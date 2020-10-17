@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -17,7 +18,9 @@
     <link rel="stylesheet" href="css/ping.min.css">
     <!-- endinject -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <style type="text/css">
         .jp-card.jp-card-safari.jp-card-identified .jp-card-front:before,
         .jp-card.jp-card-safari.jp-card-identified .jp-card-back:before {
@@ -606,7 +609,7 @@
             padding: 2px 0 0 2px;
         }
 
-        .jp-card-logo.jp-card-jcb>div {
+        .jp-card-logo.jp-card-jcb > div {
             width: 15px;
             margin-right: 1px;
             display: inline-block;
@@ -617,26 +620,26 @@
             -webkit-border-radius: 5px 0px 5px 0px;
         }
 
-        .jp-card-logo.jp-card-jcb>div:before,
-        .jp-card-logo.jp-card-jcb>div:after {
+        .jp-card-logo.jp-card-jcb > div:before,
+        .jp-card-logo.jp-card-jcb > div:after {
             content: " ";
             display: block;
             height: 8px;
         }
 
-        .jp-card-logo.jp-card-jcb>div.j {
+        .jp-card-logo.jp-card-jcb > div.j {
             background-color: #000063;
             background-image: -webkit-linear-gradient(left, #000063, #008cff);
             background-image: linear-gradient(to right, #000063, #008cff);
         }
 
-        .jp-card-logo.jp-card-jcb>div.c {
+        .jp-card-logo.jp-card-jcb > div.c {
             background-color: #630000;
             background-image: -webkit-linear-gradient(left, #630000, #ff008d);
             background-image: linear-gradient(to right, #630000, #ff008d);
         }
 
-        .jp-card-logo.jp-card-jcb>div.b {
+        .jp-card-logo.jp-card-jcb > div.b {
             background-color: #006300;
             background-image: -webkit-linear-gradient(left, #006300, #00ff00);
             background-image: linear-gradient(to right, #006300, #00ff00);
@@ -721,9 +724,9 @@
             transition: all 400ms linear;
         }
 
-        .jp-card>*,
-        .jp-card>*:before,
-        .jp-card>*:after {
+        .jp-card > *,
+        .jp-card > *:before,
+        .jp-card > *:after {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1006,369 +1009,506 @@
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
-    <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
 <![endif]-->
-    <nav class="st-nav navbar main-nav navigation fixed-top no-dropdown-transition" id="main-nav">
-        <div class="container">
-            <ul class="st-nav-menu nav navbar-nav">
-                <li class="st-nav-section nav-item">
-                    <a href="#main" class="navbar-brand"><img src="img/logo.png" alt="Ping" class="logo logo-sticky"></a>
-                </li>
-                <li class="st-nav-section st-nav-primary stick-right nav-item"><a class="st-root-link nav-link" href="index.html">Apie mus </a><a class="st-root-link nav-link" href="index.html">Sprendžiamos problemos </a><a class="st-root-link nav-link" href="index.html">Kontaktai </a></li>
-                <li class="st-nav-section st-nav-secondary nav-item"><a class="btn btn-rounded btn-solid px-3" href="signup.html" target="_blank"><span class="d-md-none d-lg-inline">Demo &nbsp; </span><i class="fas fa-laptop-code"></i></a> </li>
-                <!-- Mobile Navigation -->
-                <li class="st-nav-section st-nav-mobile nav-item">
-                    <button class="st-root-link navbar-toggler" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                    <div class="st-popup">
-                        <div class="st-popup-container"><a class="st-popup-close-button">Uždaryti</a>
-                            <div class="st-dropdown-content-group">
-                                <h4 class="text-uppercase regular">Meniu</h4><a class="regular" style="color: #1b1b1b" href="about.html"><i class="far fa-building mr-2"></i> Apie mus </a><a style="color: #1b1b1b" class="regular " href="contact.html"><i class="fas fa-tablet-alt mr-2"></i> Problemos </a><a style="color: #1b1b1b" class="regular" href="pricing.html"><i class="far fa-envelope mr-2"></i> Kontaktai </a>
-                            </div>
-                            <div class="st-dropdown-content-group bg-light b-t"><a style="color: #1b1b1b" href="login.html">Išbandyti aplikaciją <i class="fas fa-arrow-right"></i></a></div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="st-dropdown-root">
-            <div class="st-dropdown-bg" style="transform: translateX(584px) scaleX(0.780769) scaleY(0.9275);">
-                <div class="st-alt-bg" style="transform: translateY(253.369px);"></div>
-            </div>
-            <div class="st-dropdown-arrow" style="transform: translateX(787px) rotate(45deg);"></div>
-            <div class="st-dropdown-container" style="transform: translateX(584px); width: 406px; height: 371px;">
-                <div class="st-dropdown-section left" data-dropdown="blocks">
-                    <div class="st-dropdown-content">
+<nav class="st-nav navbar main-nav navigation fixed-top no-dropdown-transition" id="main-nav">
+    <div class="container">
+        <ul class="st-nav-menu nav navbar-nav">
+            <li class="st-nav-section nav-item">
+                <a href="#main" class="navbar-brand"><img src="img/logo.png" alt="Ping" class="logo logo-sticky"></a>
+            </li>
+            <li class="st-nav-section st-nav-primary stick-right nav-item"><a class="st-root-link nav-link"
+                                                                              href="index.html">Apie mus </a><a
+                    class="st-root-link nav-link" href="index.html">Sprendžiamos problemos </a><a
+                    class="st-root-link nav-link" href="index.html">Kontaktai </a></li>
+            <li class="st-nav-section st-nav-secondary nav-item"><a class="btn btn-rounded btn-solid px-3"
+                                                                    href="signup.html" target="_blank"><span
+                    class="d-md-none d-lg-inline">Demo &nbsp; </span><i class="fas fa-laptop-code"></i></a></li>
+            <!-- Mobile Navigation -->
+            <li class="st-nav-section st-nav-mobile nav-item">
+                <button class="st-root-link navbar-toggler" type="button"><span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <div class="st-popup">
+                    <div class="st-popup-container"><a class="st-popup-close-button">Uždaryti</a>
                         <div class="st-dropdown-content-group">
-                            <div class="row"> </div>
+                            <h4 class="text-uppercase regular">Meniu</h4><a class="regular" style="color: #1b1b1b"
+                                                                            href="about.html"><i
+                                class="far fa-building mr-2"></i> Apie mus </a><a style="color: #1b1b1b"
+                                                                                  class="regular "
+                                                                                  href="contact.html"><i
+                                class="fas fa-tablet-alt mr-2"></i> Problemos </a><a style="color: #1b1b1b"
+                                                                                     class="regular"
+                                                                                     href="pricing.html"><i
+                                class="far fa-envelope mr-2"></i> Kontaktai </a>
                         </div>
+                        <div class="st-dropdown-content-group bg-light b-t"><a style="color: #1b1b1b" href="login.html">Išbandyti
+                            aplikaciją <i class="fas fa-arrow-right"></i></a></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="st-dropdown-root">
+        <div class="st-dropdown-bg" style="transform: translateX(584px) scaleX(0.780769) scaleY(0.9275);">
+            <div class="st-alt-bg" style="transform: translateY(253.369px);"></div>
+        </div>
+        <div class="st-dropdown-arrow" style="transform: translateX(787px) rotate(45deg);"></div>
+        <div class="st-dropdown-container" style="transform: translateX(584px); width: 406px; height: 371px;">
+            <div class="st-dropdown-section left" data-dropdown="blocks">
+                <div class="st-dropdown-content">
+                    <div class="st-dropdown-content-group">
+                        <div class="row"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <main>
-        <!-- ./App Landing - page header -->
-        <header class="header app-landing-2-header section">
-            <div class="shapes-container">
-                <!-- diagonal shapes -->
-                <div class="shape shape-animated aos-init aos-animate" data-aos="fade-down-right" data-aos-duration="1500" data-aos-delay="100"></div>
-                <div class="shape shape-animated aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-                <div class="shape shape-animated aos-init aos-animate" data-aos="fade-up-left" data-aos-duration="500" data-aos-delay="200"></div>
-                <div class="shape shape-animated aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"></div>
-                <div class="animation-shape shape-cross">
-                    <div class="animation--rotating"></div>
-                </div>
-                <!-- static shapes -->
-                <div class="static-shape shape-ring shape-ring-1">
-                    <div class="animation animation--rotating"></div>
-                </div>
-                <div class="static-shape shape-ring shape-ring-2">
-                    <div class="animation animation--rotating-clockwise"></div>
-                </div>
-                <div class="static-shape pattern-dots-1"></div>
-                <div class="static-shape pattern-dots-2"></div>
-                <!-- main shape -->
-                <div class="static-shape background-shape-main" style="background-image: url(img/blackmap.png)"></div>
+    </div>
+</nav>
+<main>
+    <!-- ./App Landing - page header -->
+    <header class="header app-landing-2-header section">
+        <div class="shapes-container">
+            <!-- diagonal shapes -->
+            <div class="shape shape-animated aos-init aos-animate" data-aos="fade-down-right" data-aos-duration="1500"
+                 data-aos-delay="100"></div>
+            <div class="shape shape-animated aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000"
+                 data-aos-delay="100"></div>
+            <div class="shape shape-animated aos-init aos-animate" data-aos="fade-up-left" data-aos-duration="500"
+                 data-aos-delay="200"></div>
+            <div class="shape shape-animated aos-init aos-animate" data-aos="fade-up" data-aos-duration="500"
+                 data-aos-delay="200"></div>
+            <div class="animation-shape shape-cross">
+                <div class="animation--rotating"></div>
             </div>
-            <div class="container">
-                <div class="row align-items-center gap-y">
-                    <div class="col-md-6">
-                        <h1 class="display-4 display-md-2 mt-3" style="margin-bottom: -10px;"><span style="font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 13px; margin-left: -4px; font-size: 0.8em;">PING</span></h1>
-                        <p class="lead" style="margin: 0;">Parkavimas neprivalo būti sudėtingas.</p> <a href="#" style="font-size: 14px; max-width: 100px" class="nav-link py-2 px-4 btn btn-rounded btn-download btn-dark text-contrast mr-0 mr-md-4 mt-4 mb-2 mb-md-0">
-                            IŠBANDYTI APLIKACIJĄ
-                        </a>
+            <!-- static shapes -->
+            <div class="static-shape shape-ring shape-ring-1">
+                <div class="animation animation--rotating"></div>
+            </div>
+            <div class="static-shape shape-ring shape-ring-2">
+                <div class="animation animation--rotating-clockwise"></div>
+            </div>
+            <div class="static-shape pattern-dots-1"></div>
+            <div class="static-shape pattern-dots-2"></div>
+            <!-- main shape -->
+            <div class="static-shape background-shape-main" style="background-image: url(img/blackmap.png)"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center gap-y">
+                <div class="col-md-6">
+                    <h1 class="display-4 display-md-2 mt-3" style="margin-bottom: -10px;"><span
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 13px; margin-left: -4px; font-size: 0.8em;">PING</span>
+                    </h1>
+                    <p class="lead" style="margin: 0;">Parkavimas neprivalo būti sudėtingas.</p> <a href="#"
+                                                                                                    style="font-size: 14px; max-width: 100px"
+                                                                                                    class="nav-link py-2 px-4 btn btn-rounded btn-download btn-dark text-contrast mr-0 mr-md-4 mt-4 mb-2 mb-md-0">
+                    IŠBANDYTI APLIKACIJĄ
+                </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="iphone-x light front">
+                        <div class="screen shadow-box"><img src="img/screens/app/4.png" alt="..."></div>
+                        <div class="notch"></div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="iphone-x light front">
-                            <div class="screen shadow-box"><img src="img/screens/app/4.png" alt="..."></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ./App features -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 style="font-weight: 400">Sprendžiamos problemos</h2>
+            </div>
+            <div class="row gap-y text-center text-md-left">
+                <div class="col-md-4 py-4 rounded shadow-hover"><i style="font-size: 2em; margin-bottom: 18px"
+                                                                   class="far fa-star"></i>
+                    <h5 class="bold">Viešoji tvarka</h5>
+                    <p class="">Stebėdami laisvas automobilio stovėjimo vietas fiksuojame viešosios tvarkos
+                        pažeidimus</p>
+                </div>
+                <div class="col-md-4 py-4 rounded shadow-hover"><i style="font-size: 2em; margin-bottom: 18px"
+                                                                   class="far fa-map"></i>
+                    <h5 class="bold">Automobilio parkavimo vietos</h5>
+                    <p class="">Aplikacijoje vairuotojas turi galimybę realiu laiku stebėti laisvas mokamas ir nemokamas
+                        automobilio stovėjimo vietas</p>
+                </div>
+                <div class="col-md-4 py-4 rounded shadow-hover"><i style="font-size: 2em; margin-bottom: 18px"
+                                                                   class="far fa-user"></i>
+                    <h5 class="bold">Resursai</h5>
+                    <p class="">Vairuotojas, naudodamasis aplikacija, greičiau randa laisvą automobilio parkavimo vietą
+                        sutaupydamas daugiau laiko bei kuro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./Tons of benefits -->
+    <section class="section overflow-hidden">
+        <div class="container bring-to-front">
+            <div class="row gap-y align-items-center">
+                <div class="col-md-6 col-lg-5 mr-lg-auto">
+                    <div class="center-xy op-1">
+                        <div class="shape shape-background rounded-circle shadow-lg bg-info aos-init"
+                             style="width: 600px; height: 600px;" data-aos="zoom-in"></div>
+                    </div>
+                    <div class="device-twin align-items-center">
+                        <div class="mockup absolute aos-init" data-aos="fade-left">
+                            <div class="screen"><img src="img/screens/app/1.png" alt="..."></div>
+                            <span class="button"></span>
+                        </div>
+                        <div class="iphone-x front mr-0">
+                            <div class="screen shadow-box"><img src="img/screens/app/2.png" alt="..."></div>
                             <div class="notch"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <!-- ./App features -->
-        <section id="features" class="section features">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <h2 style="font-weight: 400">Sprendžiamos problemos</h2>
-                </div>
-                <div class="row gap-y text-center text-md-left">
-                    <div class="col-md-4 py-4 rounded shadow-hover"> <i style="font-size: 2em; margin-bottom: 18px" class="far fa-star"></i>
-                        <h5 class="bold">Viešoji tvarka</h5>
-                        <p class="">Stebėdami laisvas automobilio stovėjimo vietas fiksuojame viešosios tvarkos pažeidimus</p>
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="section-heading"><i class="far fa-check-circle fa-2x text-danger mb-3"></i>
+                        <h2 class="bold font-md">Mes turime daugybę privalumų</h2>
+                        <p>Ping tinkamai paskirtis Jūsų pinigus ir laiką</p>
                     </div>
-                    <div class="col-md-4 py-4 rounded shadow-hover"> <i style="font-size: 2em; margin-bottom: 18px" class="far fa-map"></i>
-                        <h5 class="bold">Automobilio parkavimo vietos</h5>
-                        <p class="">Aplikacijoje vairuotojas turi galimybę realiu laiku stebėti laisvas mokamas ir nemokamas automobilio stovėjimo vietas</p>
-                    </div>
-                    <div class="col-md-4 py-4 rounded shadow-hover"> <i style="font-size: 2em; margin-bottom: 18px" class="far fa-user"></i>
-                        <h5 class="bold">Resursai</h5>
-                        <p class="">Vairuotojas, naudodamasis aplikacija, greičiau randa laisvą automobilio parkavimo vietą sutaupydamas daugiau laiko bei kuro</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./Tons of benefits -->
-        <section class="section overflow-hidden">
-            <div class="container bring-to-front">
-                <div class="row gap-y align-items-center">
-                    <div class="col-md-6 col-lg-5 mr-lg-auto">
-                        <div class="center-xy op-1">
-                            <div class="shape shape-background rounded-circle shadow-lg bg-info aos-init" style="width: 600px; height: 600px;" data-aos="zoom-in"></div>
-                        </div>
-                        <div class="device-twin align-items-center">
-                            <div class="mockup absolute aos-init" data-aos="fade-left">
-                                <div class="screen"><img src="img/screens/app/1.png" alt="..."></div><span class="button"></span>
-                            </div>
-                            <div class="iphone-x front mr-0">
-                                <div class="screen shadow-box"><img src="img/screens/app/2.png" alt="..."></div>
-                                <div class="notch"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <div class="section-heading"><i class="far fa-check-circle fa-2x text-danger mb-3"></i>
-                            <h2 class="bold font-md">Mes turime daugybę privalumų</h2>
-                            <p>Ping tinkamai paskirtis Jūsų pinigus ir laiką</p>
-                        </div>
-                        <div class="row gap-y">
-                            <div class="col-md-6">
-                                <div class="media flex-column flex-lg-row align-items-center align-items-md-start"> <i class="far fa-eye" style="margin-right: 0.7em; font-size: 2em"></i>
-                                    <div class="media-body mt-3 mt-md-0">
-                                        <h5 class="bold mt-0 mb-1">Stebėkite realiu laiku</h5>
-                                        <p class="m-0 d-md-none d-lg-block">Galimybė realiu laiku stebėti viešas automobilių stovėjimo vietas.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media flex-column flex-lg-row align-items-center align-items-md-start"> <i class="far fa-lightbulb" style="margin-right: 1em; font-size: 2em"></i>
-                                    <div class="media-body mt-3 mt-md-0">
-                                        <h5 class="bold mt-0 mb-1">Žinokite iš anksto</h5>
-                                        <p class="m-0 d-md-none d-lg-block">Integruotas dirbtinis intelektas iš anksto įspėja dėl intensyvaus eismo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media flex-column flex-lg-row align-items-center align-items-md-start"> <i class="far fa-compass" style="margin-right: 0.8em; font-size: 2em"></i>
-                                    <div class="media-body mt-3 mt-md-0">
-                                        <h5 class="bold mt-0 mb-1">Statykite be rūpesčių</h5>
-                                        <p class="m-0 d-md-none d-lg-block">„Ping" suranda geriausias ir artimiausias stovėjimo aikšteles.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media flex-column flex-lg-row align-items-center align-items-md-start"> <i class="far fa-clock" style="margin-right: 0.7em; font-size: 2em"></i>
-                                    <div class="media-body mt-3 mt-md-0">
-                                        <h5 class="bold mt-0 mb-1">Sutaupykite laiko</h5>
-                                        <p class="m-0 d-md-none d-lg-block">Lorem ipsum sotre de la gam vot .</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./Path to success -->
-        <section class="section path-success">
-            <div class="shape-wrapper">
-                <div class="shape-ring absolute right top aos-init" data-aos="fade-up"></div>
-            </div>
-            <div class="container bring-to-front">
-                <div class="row gap-y align-items-center text-center text-lg-left">
-                    <div class="col-md-6 col-lg-5 ml-lg-auto order-md-2">
-                        <div class="device-twin align-items-center">
-                            <div class="mockup absolute right aos-init" data-aos="fade-right">
-                                <div class="screen"><img src="img/screens/app/1.png" alt="..."></div><span class="button"></span>
-                            </div>
-                            <div class="iphone-x front ml-0">
-                                <div class="screen shadow-box"><img src="img/screens/app/2.png" alt="..."></div>
-                                <div class="notch"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <div class="section-heading"><i class="fas fa-trophy fa-2x text-danger mb-3"></i>
-                            <h2 class="bold font-md">Funkcijos</h2>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li class="media flex-column flex-md-row">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail mx-auto mr-md-3 stroke-primary">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
+                    <div class="row gap-y">
+                        <div class="col-md-6">
+                            <div class="media flex-column flex-lg-row align-items-center align-items-md-start"><i
+                                    class="far fa-eye" style="margin-right: 0.7em; font-size: 2em"></i>
                                 <div class="media-body mt-3 mt-md-0">
-                                    <h5 class="bold mt-0 mb-1">Visiškai pritaikytas</h5>
-                                    <p class="m-0">Nustatykite paieškos nuostatas, susijusias su stovėjimo mokesčiais, atstumas pėščiomis iki tikslo ir pan.</p>
-                                </div>
-                            </li>
-                            <li class="media flex-column flex-md-row mt-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users mx-auto mr-md-3 stroke-primary">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                                <div class="media-body mt-3 mt-md-0">
-                                    <h5 class="bold mt-0 mb-1">Planuokite patogiai</h5>
-                                    <p class="m-0">Reikalingą paieškos laiką sistema apskaičiuoja atsižvelgdama į parkavimo situaciją atvykus.</p>
-                                </div>
-                            </li>
-                            <li class="media flex-column flex-md-row mt-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart mx-auto mr-md-3 stroke-primary">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="16"></line>
-                                </svg>
-                                <div class="media-body mt-3 mt-md-0">
-                                    <h5 class="bold mt-0 mb-1">Paskutinio kilometro navigacija</h5>
-                                    <p class="m-0">Paslauga parenka geriausias laisvas stovėjimo aikšteles ir apskaičiuoja unikalų maršrutą, kuris sumažina stovėjimo vietos paieškos laiką.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./Counters -->
-        <section class="section counters gradient gradient-primary-dark text-contrast shadow-lg">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <h2 class="text-contrast">Tūkstančiai žmonių pasikliauja Ping</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem eum laudantium. </p>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4 col-md-3 text-center"> <i class="fas fa-video" style="font-size: 30px"></i>
-                        <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
-                        <p class="m-0">Kamerų</p>
-                    </div>
-                    <div class="col-xs-4 col-md-3 text-center"> <i class="fas fa-download" style="font-size: 30px"></i>
-                        <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
-                        <p class="m-0">Atsisiuntimų</p>
-                    </div>
-                    <div class="col-xs-4 col-md-3 text-center"> <i class="fas fa-users" style="font-size: 30px"></i>
-                        <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
-                        <p class="m-0">Siekėjų</p>
-                    </div>
-                    <div class="col-xs-4 col-md-3 text-center"> <i class="fas fa-car" style="font-size: 30px"></i>
-                        <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
-                        <p class="m-0">Vietų</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- .Screenshots -->
-        <section class="screenshots coverflow">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <h2 class="bold display-4">Galerija</h2>
-                </div>
-                <div class="swiper-container swiper-container-initialized swiper-container-horizontal" data-sw-show-items="5" data-sw-space-between="20" data-sw-centered-slides="true" data-sw-autoplay="2500" data-sw-breakpoints="{&quot;1200&quot;: {&quot;slidesPerView&quot;: 5,&quot;spaceBetween&quot;: 0},&quot;992&quot;: {&quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 0},&quot;576&quot;: {&quot;slidesPerView&quot;: 2,&quot;spaceBetween&quot;: 0}}">
-                    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(109.5px, 0px, 0px);">
-                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" style="width: 219px;" data-swiper-slide-index="4"><img class="img-responsive" src="img/screens/app/5.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" style="width: 219px;" data-swiper-slide-index="5"><img class="img-responsive" src="img/screens/app/6.png" alt="..."></div>
-                        <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="0"><img class="img-responsive" src="img/screens/app/1.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate-prev" style="width: 219px;" data-swiper-slide-index="1"><img class="img-responsive" src="img/screens/app/2.png" alt="..."></div>
-                        <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="2"><img class="img-responsive" src="img/screens/app/3.png" alt="..."></div>
-                        <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="3"><img class="img-responsive" src="img/screens/app/4.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate-active" style="width: 219px;" data-swiper-slide-index="4"><img class="img-responsive" src="img/screens/app/5.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate-next" style="width: 219px;" data-swiper-slide-index="5"><img class="img-responsive" src="img/screens/app/6.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate" style="width: 219px;" data-swiper-slide-index="0"><img class="img-responsive" src="img/screens/app/1.png" alt="..."></div>
-                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" style="width: 219px;" data-swiper-slide-index="1"><img class="img-responsive" src="img/screens/app/2.png" alt="..."></div>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                </div>
-            </div>
-        </section>
-        <!-- ./Testimonials -->
-        <section class="section bg-light edge bottom-right">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <h2 class="bold display-4">Mūsų komanda</h2>
-                </div>
-                <div class="testimonials-slider">
-                    <div class="swiper-container pb-5 swiper-container-initialized swiper-container-horizontal">
-                        <div class="swiper-wrapper text-center w-50" style="transition-duration: 0ms; transform: translate3d(-439px, 0px, 0px);">
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Meda Šulskytė,</cite> <span class="small text-secondary mt-0">Komunikacija ir plėtra</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Tomas Rasimvičius,</cite> <span class="small text-secondary mt-0">IT</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Domas Martišius,</cite> <span class="small text-secondary mt-0">IT</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Edgar Buchvalov,</cite> <span class="small text-secondary mt-0">IT</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/5.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Ervinas Mitkevičius,</cite> <span class="small text-secondary mt-0">Grafika ir IT</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="5" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"> <img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Adomas Jucevičius,</cite> <span class="small text-secondary mt-0">Komunikacija ir plėtra</span></footer>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 439px;">
-                                <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
-                                    <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
-                                    <hr class="w-50">
-                                    <footer><cite class="bold text-primary text-capitalize">— Vardas,</cite> <span class="small text-secondary mt-0">Plėtra</span></footer>
+                                    <h5 class="bold mt-0 mb-1">Stebėkite realiu laiku</h5>
+                                    <p class="m-0 d-md-none d-lg-block">Galimybė realiu laiku stebėti viešas automobilių
+                                        stovėjimo vietas.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        <div class="col-md-6">
+                            <div class="media flex-column flex-lg-row align-items-center align-items-md-start"><i
+                                    class="far fa-lightbulb" style="margin-right: 1em; font-size: 2em"></i>
+                                <div class="media-body mt-3 mt-md-0">
+                                    <h5 class="bold mt-0 mb-1">Žinokite iš anksto</h5>
+                                    <p class="m-0 d-md-none d-lg-block">Integruotas dirbtinis intelektas iš anksto
+                                        įspėja dėl intensyvaus eismo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="media flex-column flex-lg-row align-items-center align-items-md-start"><i
+                                    class="far fa-compass" style="margin-right: 0.8em; font-size: 2em"></i>
+                                <div class="media-body mt-3 mt-md-0">
+                                    <h5 class="bold mt-0 mb-1">Statykite be rūpesčių</h5>
+                                    <p class="m-0 d-md-none d-lg-block">„Ping" suranda geriausias ir artimiausias
+                                        stovėjimo aikšteles.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="media flex-column flex-lg-row align-items-center align-items-md-start"><i
+                                    class="far fa-clock" style="margin-right: 0.7em; font-size: 2em"></i>
+                                <div class="media-body mt-3 mt-md-0">
+                                    <h5 class="bold mt-0 mb-1">Sutaupykite laiko</h5>
+                                    <p class="m-0 d-md-none d-lg-block">Lorem ipsum sotre de la gam vot .</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ./Download -->
-        <section class="section app-download">
-            <div class="container bring-to-front">
-                <div class="shadow-lg bg-contrast p-5 rounded">
-                    <div class="section-heading text-center">
-                        <p class="text-primary regular">Išbandykite dabar</p>
-                        <h2>Demo aplikacija</h2>
-                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur debitis delectus, ducimus enim et eveniet facilis harum ipsa magni non odit pariatur placeat, praesentium quae quo sed, sunt ut.</p>
+        </div>
+    </section>
+    <!-- ./Path to success -->
+    <section class="section path-success">
+        <div class="shape-wrapper">
+            <div class="shape-ring absolute right top aos-init" data-aos="fade-up"></div>
+        </div>
+        <div class="container bring-to-front">
+            <div class="row gap-y align-items-center text-center text-lg-left">
+                <div class="col-md-6 col-lg-5 ml-lg-auto order-md-2">
+                    <div class="device-twin align-items-center">
+                        <div class="mockup absolute right aos-init" data-aos="fade-right">
+                            <div class="screen"><img src="img/screens/app/1.png" alt="..."></div>
+                            <span class="button"></span>
+                        </div>
+                        <div class="iphone-x front ml-0">
+                            <div class="screen shadow-box"><img src="img/screens/app/2.png" alt="..."></div>
+                            <div class="notch"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="section-heading"><i class="fas fa-trophy fa-2x text-danger mb-3"></i>
+                        <h2 class="bold font-md">Funkcijos</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="media flex-column flex-md-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-mail mx-auto mr-md-3 stroke-primary">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div class="media-body mt-3 mt-md-0">
+                                <h5 class="bold mt-0 mb-1">Visiškai pritaikytas</h5>
+                                <p class="m-0">Nustatykite paieškos nuostatas, susijusias su stovėjimo mokesčiais,
+                                    atstumas pėščiomis iki tikslo ir pan.</p>
+                            </div>
+                        </li>
+                        <li class="media flex-column flex-md-row mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-users mx-auto mr-md-3 stroke-primary">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div class="media-body mt-3 mt-md-0">
+                                <h5 class="bold mt-0 mb-1">Planuokite patogiai</h5>
+                                <p class="m-0">Reikalingą paieškos laiką sistema apskaičiuoja atsižvelgdama į parkavimo
+                                    situaciją atvykus.</p>
+                            </div>
+                        </li>
+                        <li class="media flex-column flex-md-row mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 class="feather feather-bar-chart mx-auto mr-md-3 stroke-primary">
+                                <line x1="12" y1="20" x2="12" y2="10"></line>
+                                <line x1="18" y1="20" x2="18" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="16"></line>
+                            </svg>
+                            <div class="media-body mt-3 mt-md-0">
+                                <h5 class="bold mt-0 mb-1">Paskutinio kilometro navigacija</h5>
+                                <p class="m-0">Paslauga parenka geriausias laisvas stovėjimo aikšteles ir apskaičiuoja
+                                    unikalų maršrutą, kuris sumažina stovėjimo vietos paieškos laiką.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./Counters -->
+    <section class="section counters gradient gradient-primary-dark text-contrast shadow-lg">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="text-contrast">Tūkstančiai žmonių pasikliauja Ping</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut autem eum laudantium. </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-md-3 text-center"><i class="fas fa-video" style="font-size: 30px"></i>
+                    <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
+                    <p class="m-0">Kamerų</p>
+                </div>
+                <div class="col-xs-4 col-md-3 text-center"><i class="fas fa-download" style="font-size: 30px"></i>
+                    <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
+                    <p class="m-0">Atsisiuntimų</p>
+                </div>
+                <div class="col-xs-4 col-md-3 text-center"><i class="fas fa-users" style="font-size: 30px"></i>
+                    <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
+                    <p class="m-0">Siekėjų</p>
+                </div>
+                <div class="col-xs-4 col-md-3 text-center"><i class="fas fa-car" style="font-size: 30px"></i>
+                    <p class="counter bold font-md mt-0" style="visibility: visible;">9999</p>
+                    <p class="m-0">Vietų</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .Screenshots -->
+    <section class="screenshots coverflow">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="bold display-4">Galerija</h2>
+            </div>
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal"
+                 data-sw-show-items="5" data-sw-space-between="20" data-sw-centered-slides="true"
+                 data-sw-autoplay="2500"
+                 data-sw-breakpoints="{&quot;1200&quot;: {&quot;slidesPerView&quot;: 5,&quot;spaceBetween&quot;: 0},&quot;992&quot;: {&quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 0},&quot;576&quot;: {&quot;slidesPerView&quot;: 2,&quot;spaceBetween&quot;: 0}}">
+                <div class="swiper-wrapper"
+                     style="transition-duration: 0ms; transform: translate3d(109.5px, 0px, 0px);">
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" style="width: 219px;"
+                         data-swiper-slide-index="4"><img class="img-responsive" src="img/screens/app/5.png" alt="...">
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" style="width: 219px;"
+                         data-swiper-slide-index="5"><img class="img-responsive" src="img/screens/app/6.png" alt="...">
+                    </div>
+                    <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="0"><img
+                            class="img-responsive" src="img/screens/app/1.png" alt="..."></div>
+                    <div class="swiper-slide swiper-slide-duplicate-prev" style="width: 219px;"
+                         data-swiper-slide-index="1"><img class="img-responsive" src="img/screens/app/2.png" alt="...">
+                    </div>
+                    <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="2"><img
+                            class="img-responsive" src="img/screens/app/3.png" alt="..."></div>
+                    <div class="swiper-slide" style="width: 219px;" data-swiper-slide-index="3"><img
+                            class="img-responsive" src="img/screens/app/4.png" alt="..."></div>
+                    <div class="swiper-slide swiper-slide-duplicate-active" style="width: 219px;"
+                         data-swiper-slide-index="4"><img class="img-responsive" src="img/screens/app/5.png" alt="...">
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate-next" style="width: 219px;"
+                         data-swiper-slide-index="5"><img class="img-responsive" src="img/screens/app/6.png" alt="...">
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" style="width: 219px;" data-swiper-slide-index="0">
+                        <img class="img-responsive" src="img/screens/app/1.png" alt="..."></div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" style="width: 219px;"
+                         data-swiper-slide-index="1"><img class="img-responsive" src="img/screens/app/2.png" alt="...">
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button"
+                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                role="button" aria-label="Go to slide 2"></span><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button"
+                        aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                role="button" aria-label="Go to slide 4"></span><span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                        aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                role="button" aria-label="Go to slide 6"></span></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+    <!-- ./Testimonials -->
+    <section class="section bg-light edge bottom-right">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="bold display-4">Mūsų komanda</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="swiper-container pb-5 swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper text-center w-50"
+                         style="transition-duration: 0ms; transform: translate3d(-439px, 0px, 0px);">
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Meda Šulskytė,</cite> <span
+                                        class="small text-secondary mt-0">Komunikacija ir plėtra</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Tomas Rasimvičius,</cite>
+                                    <span class="small text-secondary mt-0">IT</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Domas Martišius,</cite> <span
+                                        class="small text-secondary mt-0">IT</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Edgar Buchvalov,</cite> <span
+                                        class="small text-secondary mt-0">IT</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/5.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Ervinas Mitkevičius,</cite>
+                                    <span class="small text-secondary mt-0">Grafika ir IT</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="5" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Adomas Jucevičius,</cite>
+                                    <span class="small text-secondary mt-0">Komunikacija ir plėtra</span></footer>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                             data-swiper-slide-index="0" style="width: 439px;">
+                            <div class="d-flex flex-column align-items-center"><img src="img/avatar/1.jpg" alt=""
+                                                                                    class="rounded-circle shadow mb-4">
+                                <p class="w-75 lead mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus asperiores consequatur cum distinctio, dolorem earum error esse ex fugiat
+                                    inventore maiores minima, non placeat praesentium quam quas ut, vero voluptatem.</p>
+                                <hr class="w-50">
+                                <footer><cite class="bold text-primary text-capitalize">— Vardas,</cite> <span
+                                        class="small text-secondary mt-0">Plėtra</span></footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                            class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                            aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                    role="button"
+                                                                    aria-label="Go to slide 2"></span><span
+                            class="swiper-pagination-bullet" tabindex="0" role="button"
+                            aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                                                    role="button" aria-label="Go to slide 4"></span>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./Download -->
+    <section class="section app-download">
+        <div class="container bring-to-front">
+            <div class="shadow-lg bg-contrast p-5 rounded">
+                <div class="section-heading text-center">
+                    <p class="text-primary regular">Išbandykite dabar</p>
+                    <h2>Demo aplikacija</h2>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                        consequuntur debitis delectus, ducimus enim et eveniet facilis harum ipsa magni non odit
+                        pariatur placeat, praesentium quae quo sed, sunt ut.</p>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12" id="map" style="height: 600px;"></div>
+                        <div class="col-lg-12 col-sm-12 col-xs-12" id="parking_lot_info"></div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ./Footer - Stay in Touch -->
-        <footer class="site-footer section text-center block bg-contrast">
-            <hr class="mt-5">
-            <nav class="nav social-icons justify-content-center mt-4"><a href="#" class="mr-3 font-regular text-secondary"><i class="fab fa-facebook-f"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i class="fab fa-twitter"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i class="fab fa-instagram"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i class="fas fa-rss"></i></a> <a href="#" class="font-regular text-secondary"><i class="fab fa-linkedin-in"></i></a></nav>
-            <p class="small copyright text-secondary">© 2020 PingTeam</p>
-        </footer>
-    </main>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCupw2Qx3w0DQEnwKhDA7e0-27LZ9cOedM&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer=""></script>
-    <script src="js/lib.min.js"></script>
-    <script src="js/ping.min.js"></script>
+        </div>
+    </section>
+    <!-- ./Footer - Stay in Touch -->
+    <footer class="site-footer section text-center block bg-contrast">
+        <hr class="mt-5">
+        <nav class="nav social-icons justify-content-center mt-4"><a href="#"
+                                                                     class="mr-3 font-regular text-secondary"><i
+                class="fab fa-facebook-f"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i
+                class="fab fa-twitter"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i
+                class="fab fa-instagram"></i></a> <a href="#" class="mr-3 font-regular text-secondary"><i
+                class="fas fa-rss"></i></a> <a href="#" class="font-regular text-secondary"><i
+                class="fab fa-linkedin-in"></i></a></nav>
+        <p class="small copyright text-secondary">© 2020 PingTeam</p>
+    </footer>
+</main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCupw2Qx3w0DQEnwKhDA7e0-27LZ9cOedM&callback=initMap&libraries=&v=weekly"
+        defer></script>
+<script src="https://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.min.js"
+        defer></script>
+<script src="js/lib.min.js"></script>
+<script src="js/ping.min.js"></script>
+<script src="js/map.js"></script>
+
 </body>
 
 </html>
