@@ -35,13 +35,12 @@ function resetMarkers(map, availableParkings) {
     return availableParkings.map(parking => {
         const marker = new MarkerWithLabel({
             position: parking.location,
-            // icon: mapStyles.uavSymbolBlack,
+            icon: new google.maps.MarkerImage('img/logo.png', null, null, null, new google.maps.Size(39, 60)),
             labelContent:
-                '<div style="font-size: 14px; font-weight: bolder; display: flex; flex-direction:column;">' +
-                `<span style="text-align:left; background-color: #54cb04; padding-left: 5px; border-radius: 25px;"><i class="lnr lnr-checkmark-circle"></i> ${parking.totalSpots - parking.takenSpots}</span>` +
-                `<span style="text-align:left; background-color: #2ccbf7; padding-left: 5px; border-radius: 25px;"><i class="lnr lnr-car"></i> ${parking.totalSpots}</span>` +
+                '<div style="font-size: 18px; font-weight: bolder; display: flex; flex-direction:column;">' +
+                `<span style="text-align:left; color: white; background-color: green; border-radius: 50%; padding: 2px;">${parking.totalSpots - parking.takenSpots}</span>` +
                 '</div>',
-            labelAnchor: new google.maps.Point(20, 45),
+            labelAnchor: new google.maps.Point(13, 55),
             labelClass: "labels",
             labelStyle: {
                 opacity: 1
@@ -69,7 +68,7 @@ function showParkingDetails(parking) {
         '                                    </div>\n' +
         '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
         '                                    <div class="row">\n' +
-        '                                        <div class="col-lg-4 col-sm-6 col-xs-12 box-item">\n' +
+        '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
         '                    <span class="icon">\n' +
         '                      <i class="lnr lnr-car"></i>\n' +
         '                    </span>\n' +
@@ -78,7 +77,7 @@ function showParkingDetails(parking) {
         `                                                <p>${parking.totalSpots - parking.takenSpots}</p>\n` +
         '                                            </div>\n' +
         '                                        </div>\n' +
-        '                                        <div class="col-lg-4 col-sm-6 col-xs-12 box-item">\n' +
+        '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
         '                    <span class="icon">\n' +
         '                      <i class="lnr lnr-apartment"></i>\n' +
         '                    </span>\n' +
@@ -87,7 +86,7 @@ function showParkingDetails(parking) {
         `                                                <p>${parking.totalSpots}</p>\n` +
         '                                            </div>\n' +
         '                                        </div>\n' +
-        '                                        <div class="col-lg-4 col-sm-6 col-xs-12 box-item">\n' +
+        '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
         '                    <span class="icon">\n' +
         '                      <i class="lnr lnr-calendar-full"></i>\n' +
         '                    </span>\n' +
