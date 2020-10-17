@@ -65,7 +65,7 @@ function showParkingDetails(parking) {
         '                                <div class="container">\n' +
         '                                    <div class="row">\n' +
         '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
-        `                                        <img class="parking_img" src="source/trinapolio-impulsas-1.jpg" alt="">` +
+        `                                        <img class="parking_img" src="${parking.image}" alt="">` +
         '                                    </div>\n' +
         '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
         '                                    <div class="row">\n' +

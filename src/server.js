@@ -30,14 +30,16 @@ const DB = {
     totalSpots: 100,
     takenSpots: 23,
     updatedDate: now(),
-    location: {lat: 54.679608, lng: 25.283881}
+    location: {lat: 54.679608, lng: 25.283881},
+    image:'source/trinapolio-impulsas-1.jpg'
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
     totalSpots: 42,
     takenSpots: 5,
     updatedDate: now(),
-    location: {lat: 54.682144, lng: 25.280008}
+    location: {lat: 54.682144, lng: 25.280008},
+    image:'source/trinapolio-impulsas-1.jpg'
   }
 };
 
@@ -52,6 +54,7 @@ app.get('/api/streets', function (req, res) {
       takenSpots: data.takenSpots,
       updatedDate: data.updatedDate,
       location: data.location,
+      image: data.image,
     }
   });
 

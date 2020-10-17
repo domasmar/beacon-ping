@@ -13,6 +13,6 @@ const fileName = (() => {
 
 
 (async () => {
-  const response = await ai(fileName, onlyCache)
+  const response = await ai(fileName, onlyCache);
   console.log(JSON.stringify(response));
 })();
