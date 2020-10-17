@@ -12,11 +12,6 @@
   6. Features Section Style
    ========================================================================== */
 #parking_info_container .container {
-    /*background: url(../img/bg-1.jpg) fixed no-repeat;*/
-    /*background-size: cover;*/
-    /*color: #fff;*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -39,6 +34,11 @@
     text-align: center;
     position: relative;
     z-index: 1;
+}
+
+#parking_info_container .parking_img {
+    width: 500px;
+    height: 300px;
 }
 
 #parking_info_container .box-item {

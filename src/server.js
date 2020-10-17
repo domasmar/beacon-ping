@@ -1,15 +1,16 @@
-const express = require('express')
+const express = require('express');
 const fs = require('fs');
 const {takePlayAndTakeScreenshot} = require("./screenshots/take");
-const app = express()
+const app = express();
+const path = require('path');
 
 const {ai} = require('./ai');
 
-const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '')
+const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '');
 
 async function updateDatabase() {
   Object.entries(DB).forEach(([streetSlug, data]) => {
-    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5)
+    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5);
     data.updatedDate = now();
     data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
   });
@@ -40,7 +41,8 @@ const DB = {
   }
 };
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use('/source', express.static(path.join(__dirname, '../source')));
 
 app.get('/api/streets', function (req, res) {
   const response = Object.entries(DB).map(([streetSlug, data]) => {
@@ -54,7 +56,7 @@ app.get('/api/streets', function (req, res) {
   });
 
   res.json(response);
-})
+});
 
 app.get('/api/created_images', (req, res) => {
   res.json({createdImages, createdImagesAIs});
@@ -80,7 +82,7 @@ async function startProcessingRealTimeImage() {
   if (!running) return;
 
   try {
-    const imageInBase64 = await takePlayAndTakeScreenshot()
+    const imageInBase64 = await takePlayAndTakeScreenshot();
     const filename = await new Promise((resolve, reject) => {
       const fileName = process.env.PUBLIC_DIR + '/generated/vilnius' + '-' + now() + '.png';
       createdImages.push(fileName);

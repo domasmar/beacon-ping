@@ -64,6 +64,11 @@ function showParkingDetails(parking) {
         '                                </div>\n' +
         '                                <div class="container">\n' +
         '                                    <div class="row">\n' +
+        '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
+        `                                        <img class="parking_img" src="source/trinapolio-impulsas-1.jpg" alt="">` +
+        '                                    </div>\n' +
+        '                                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item">\n' +
+        '                                    <div class="row">\n' +
         '                                        <div class="col-lg-4 col-sm-6 col-xs-12 box-item">\n' +
         '                    <span class="icon">\n' +
         '                      <i class="lnr lnr-car"></i>\n' +
@@ -91,6 +96,8 @@ function showParkingDetails(parking) {
         `                                              <p>${parking.updatedDate}</p>\n` +
         '                                            </div>\n' +
         '                                        </div>\n' +
+        '                                        </div>\n' +
+        '                                    </div>\n' +
         '                                    </div>\n' +
         '                                </div>\n' +
         '                        </div>';
