@@ -10,7 +10,7 @@ function updateDatabase(scheduleNext = true) {
   }, 10000);
 }
 
-updateDatabase();
+// updateDatabase();
 
 const DB = {
   'vokieciu-1': {
