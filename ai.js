@@ -84,5 +84,5 @@ function haveInCache(filename) {
 }
 
 function cacheFile(filename) {
-  return './cache/' + filename + '.json';
+  return __dirname + '../cache/' + filename + '.json';
 }
