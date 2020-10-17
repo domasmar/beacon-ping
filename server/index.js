@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 
+const { ai } = require('../ai/ai');
+
 const DB = {
   'vokieciu-1': {
     address: 'Vokieciu Gatve',
     totalSpots: 100,
     takenSpots: 23,
-    updatedDate: new Date()
+    updatedDate: new Date().toISOString().replace('T', ' ' ).replace('Z', '').replace(/\.\d{3}$/, '')
   }
 };
 
@@ -22,4 +24,6 @@ app.get('/street', function (req, res) {
   }
 })
 
-app.listen(3000)
+app.listen(3000);
+
+console.log('running');
