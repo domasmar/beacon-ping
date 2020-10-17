@@ -1,4 +1,5 @@
 const express = require('express')
+const fs = require('fs');
 const {takePlayAndTakeScreenshot} = require("./screenshots/take");
 const app = express()
 
@@ -85,15 +86,15 @@ async function startProcessingRealTimeImage() {
   try {
     const imageInBase64 = await takePlayAndTakeScreenshot()
     const filename = await new Promise((resolve, reject) => {
-      const fileName = __dirname + 'public/generated/vilnius' + '-' + now() + '.png';
+      const fileName = __dirname + '/public/generated/vilnius' + '-' + now() + '.png';
       createdImages.push(fileName);
       fs.writeFile(fileName, imageInBase64, 'base64', function (err) {
         if (err) reject(err);
-        else resolve()
+        else resolve(fileName);
       });
     });
 
-    const result = await ai(filename);
+    const result = await ai(filename, false);
 
     createdImagesAIs.push({filename, awsResult: result});
 

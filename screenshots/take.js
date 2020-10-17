@@ -18,8 +18,7 @@ async function takePlayAndTakeScreenshot() {
       await driver.findElement(By.className('vjs-big-play-button')).click();
       await driver.sleep(4000);
       const image = await takeScreenshot(driver);
-      const croppedImage = await cropImage(image);
-      resolve(croppedImage);
+      resolve(image);
     } catch (e) {
       console.error(e);
       reject(e);
@@ -47,7 +46,7 @@ function takeScreenshot(driver) {
 async function cropImage(image) {
   const buffer = Buffer.from(image, 'base64')
   const resultBuffer = await sharp(buffer)
-      .extract({ width: 600, height: 300, left: 60, top: 40 })
+      .extract({ width: 600, height: 350, left: 60, top: 40 })
       .jpeg()
       .toBuffer()
 
