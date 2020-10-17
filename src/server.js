@@ -51,7 +51,7 @@ app.get('/api/streets', function (req, res) {
       updatedDate: data.updatedDate,
       location: data.location,
     }
-  })
+  });
 
   res.json(response);
 })

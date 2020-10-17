@@ -1,0 +1,100 @@
+/* ==========================================================================
+16. Map Style
+ ========================================================================== */
+#map {
+    height: 500px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+/* ==========================================================================
+  6. Features Section Style
+   ========================================================================== */
+#parking_info_container .container {
+    /*background: url(../img/bg-1.jpg) fixed no-repeat;*/
+    /*background-size: cover;*/
+    /*color: #fff;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#parking_info_container .section-header {
+    padding: 20px 0 0 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#parking_info_container .section-subtitle {
+    color: #fff;
+}
+
+#parking_info_container .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#parking_info_container .box-item {
+    padding: 15px 0;
+}
+
+#parking_info_container .box-item .icon {
+    border: 1px solid #61D2B4;
+    text-align: center;
+    float: left;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#parking_info_container .box-item .icon i {
+    color: #61D2B4;
+    font-size: 20px;
+    line-height: 35px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#parking_info_container .section-header .section-title  {
+    font-size: 26px;
+}
+
+#parking_info_container .box-item .text {
+    padding-left: 80px;
+}
+
+#parking_info_container .box-item .text h4 {
+    color: #61D2B4;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 22px;
+}
+
+#parking_info_container .box-item .text p {
+    font-size: 12px;
+    line-height: 0;
+}
+
+#parking_info_container .box-item:hover .icon {
+    background: #61D2B4;
+}
+
+#parking_info_container .box-item:hover .icon i {
+    color: #ffffff;
+}
+
+#parking_info_container .show-box img {
+    position: absolute;
+    bottom: -120px;
+}
