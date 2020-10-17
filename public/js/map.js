@@ -1,3 +1,5 @@
+let visibleParkingDetails = null;
+
 async function initMap() {
     const availableParkings = await fetchParkings();
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -8,8 +10,16 @@ async function initMap() {
     setInterval(async () => {
         dropMarkers(markers);
         const availableParkings = await fetchParkings();
+        updateParkingDetails(availableParkings);
         markers = resetMarkers(map, availableParkings);
     }, 5000);
+};
+
+function updateParkingDetails(availableParkings) {
+    if (visibleParkingDetails) {
+        visibleParkingDetails = availableParkings.find(parking => parking.address === visibleParkingDetails.address)
+        showParkingDetails(visibleParkingDetails)
+    }
 }
 
 async function fetchParkings() {
@@ -45,7 +55,7 @@ function resetMarkers(map, availableParkings) {
 }
 
 function showParkingDetails(parking) {
-
+    visibleParkingDetails = parking;
     const parkingInfoHtml =
         '                            <div id="parking_info_container" class="col-lg-12 col-sm-12 col-xs-12">\n' +
         '                                <div class="section-header">\n' +
