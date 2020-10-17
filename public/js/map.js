@@ -1,13 +1,28 @@
 async function initMap() {
-    const response = await fetch(`/api/streets`);
-    const availableParkings = await response.json();
-
+    const availableParkings = await fetchParkings();
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: {lat: 54.6781767, lng: 25.2847437},
     });
+    let markers = resetMarkers(map, availableParkings);
+    setInterval(async () => {
+        dropMarkers(markers);
+        const availableParkings = await fetchParkings();
+        markers = resetMarkers(map, availableParkings);
+    }, 5000);
+}
 
-    availableParkings.forEach(parking => {
+async function fetchParkings() {
+    const response = await fetch(`/api/streets`);
+    return await response.json();
+}
+
+function dropMarkers(markers) {
+    markers.forEach(marker => marker.setMap(null));
+}
+
+function resetMarkers(map, availableParkings) {
+    return availableParkings.map(parking => {
         const marker = new MarkerWithLabel({
             position: parking.location,
             // icon: mapStyles.uavSymbolBlack,
@@ -25,10 +40,9 @@ async function initMap() {
         });
 
         marker.addListener("click", () => showParkingDetails(parking));
+        return marker;
     });
 }
-
-funx
 
 function showParkingDetails(parking) {
 
