@@ -21,6 +21,7 @@ async function updateDatabase() {
     updateDatabase(true)
   }, 5000);
 }
+
 setTimeout(() => {
   updateDatabase(true);
 }, 1000);
@@ -58,15 +59,53 @@ app.get('/api/streets', function (req, res) {
   res.json(response);
 })
 
-app.get('/api/latest_image_from_vilnius', async (req, res) => {
+app.get('/api/created_images', (req, res) => {
+  res.json(createdImages);
+});
+
+app.get('/api/start', (req, res) => {
+  running = true;
+  setTimeout(() => startProcessingRealTimeImage(), 100);
+  res.sendStatus(200);
+});
+
+app.get('/api/stop', (req, res) => {
+  running = false;
+  res.sendStatus(200);
+});
+
+app.get('/api/refresh_rate', (req, res) => {
+  refreshRate = Math.max(parseInt(req.query.value), 20000);
+  res.sendStatus(200);
+});
+
+async function startProcessingRealTimeImage() {
+  if (!running) return;
+
   try {
-    const image = await takePlayAndTakeScreenshot()
-    res.json({image});
+    const imageInBase64 = await takePlayAndTakeScreenshot()
+    await new Promise((resolve, reject) => {
+      const fileName = __dirname + 'public/generated/vilnius' + '-' + now() + '.png';
+      createdImages.push(fileName);
+      fs.writeFile(fileName, imageInBase64, 'base64', function (err) {
+        if (err) reject(err);
+        else resolve()
+      });
+    })
+
   } catch (e) {
-    console.error('latest_image_from_vilnius', e);
-    res.sendStatus(500);
+    console.error(e);
   }
-})
+
+  if (running) {
+    setTimeout(startProcessingRealTimeImage, refreshRate);
+  }
+}
+
+const createdImages = [];
+let running = false;
+let refreshRate = 60000;
+
 
 app.listen(process.env.PORT || 3000);
 
