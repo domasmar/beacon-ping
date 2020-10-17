@@ -1,4 +1,5 @@
 const express = require('express')
+const {takePlayAndTakeScreenshot} = require("./screenshots/take");
 const app = express()
 
 // TODO use AI
@@ -14,7 +15,7 @@ async function updateDatabase() {
 
     data.updatedDate = now();
     data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
-  })
+  });
 
   setTimeout(() => {
     updateDatabase(true)
@@ -55,6 +56,16 @@ app.get('/api/streets', function (req, res) {
   })
 
   res.json(response);
+})
+
+app.get('/api/latest_image_from_vilnius', async (req, res) => {
+  try {
+    const image = await takePlayAndTakeScreenshot()
+    res.json({image});
+  } catch (e) {
+    console.error('latest_image_from_vilnius', e);
+    res.status(500);
+  }
 })
 
 app.listen(process.env.PORT || 3000);
