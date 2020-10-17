@@ -42,13 +42,3 @@ function takeScreenshot(driver) {
         })
   })
 }
-
-async function cropImage(image) {
-  const buffer = Buffer.from(image, 'base64')
-  const resultBuffer = await sharp(buffer)
-      .extract({ width: 600, height: 350, left: 60, top: 40 })
-      .jpeg()
-      .toBuffer()
-
-  return Buffer.from(resultBuffer).toString('base64')
-}

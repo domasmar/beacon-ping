@@ -84,5 +84,5 @@ function haveInCache(filename) {
 }
 
 function cacheFile(filename) {
-    return __dirname + '/public/generated/' + filename + '.json';
+    return process.env.PUBLIC_DIR + '/generated/' + filename + '.json';
 }

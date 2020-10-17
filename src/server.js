@@ -3,17 +3,13 @@ const fs = require('fs');
 const {takePlayAndTakeScreenshot} = require("./screenshots/take");
 const app = express()
 
-// TODO use AI
 const {ai} = require('./ai');
 
 const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '')
 
 async function updateDatabase() {
-
   Object.entries(DB).forEach(([streetSlug, data]) => {
-
     const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5)
-
     data.updatedDate = now();
     data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
   });
@@ -86,7 +82,7 @@ async function startProcessingRealTimeImage() {
   try {
     const imageInBase64 = await takePlayAndTakeScreenshot()
     const filename = await new Promise((resolve, reject) => {
-      const fileName = __dirname + '/public/generated/vilnius' + '-' + now() + '.png';
+      const fileName = process.env.PUBLIC_DIR + '/generated/vilnius' + '-' + now() + '.png';
       createdImages.push(fileName);
       fs.writeFile(fileName, imageInBase64, 'base64', function (err) {
         if (err) reject(err);
