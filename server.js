@@ -41,7 +41,9 @@ const DB = {
   }
 };
 
-app.get('/streets', function (req, res) {
+app.use(express.static('public'))
+
+app.get('/api/streets', function (req, res) {
   const response = Object.entries(DB).map(([streetSlug, data]) => {
     return {
       address: data.address,
