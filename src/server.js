@@ -16,7 +16,7 @@ async function updateDatabase() {
       const nextIndex = (data.imageIndex + 1) % data.sources.length;
 
       const cacheFile = `${__dirname}/../public/generated/${data.sources[nextIndex]}.json`;
-      const generatedImage = `public/generated/${data.sources[nextIndex]}.jpg`;
+      const generatedImage = `generated/${data.sources[nextIndex]}.jpg`;
 
       const fromCache = JSON.parse(fs.readFileSync(cacheFile, {encoding: 'utf-8'}));
       const labelWithCar = fromCache.Labels.find(l => l.Name === 'Car');
