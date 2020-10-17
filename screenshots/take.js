@@ -5,12 +5,6 @@ const chrome = require('selenium-webdriver/chrome');
 
 module.exports = {takePlayAndTakeScreenshot}
 
-// takePlayAndTakeScreenshot().then((image) => {
-//   require('fs').writeFile('out.png', image, 'base64', function (err) {
-//     console.log(err);
-//   });
-// })
-
 async function takePlayAndTakeScreenshot() {
   return new Promise(async (resolve, reject) => {
     let driver;
