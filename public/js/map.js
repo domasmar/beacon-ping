@@ -8,8 +8,8 @@ async function initMap() {
     });
     let markers = resetMarkers(map, availableParkings);
     setInterval(async () => {
-        dropMarkers(markers);
         const availableParkings = await fetchParkings();
+        dropMarkers(markers);
         updateParkingDetails(availableParkings);
         markers = resetMarkers(map, availableParkings);
     }, 5000);
