@@ -1,5 +1,5 @@
 .idea
 *.iml
-node_platform
-package-lock.json
 .env
+node_modules
+package-lock.json
