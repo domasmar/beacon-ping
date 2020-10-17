@@ -12,10 +12,10 @@ async function takePlayAndTakeScreenshot() {
       driver = await new Builder()
           .forBrowser('chrome')
           .build();
-      await driver.sleep(1000);
+      await driver.sleep(4000);
       await driver.get('https://balticlivecam.com/cameras/lithuania/vilnius/vilnius-sv-jono-gatve/?embed');
       await driver.findElement(By.className('vjs-big-play-button')).click();
-      await driver.sleep(2000);
+      await driver.sleep(4000);
       const image = await takeScreenshot(driver);
       resolve(image);
     } catch (e) {

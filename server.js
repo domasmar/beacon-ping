@@ -64,7 +64,7 @@ app.get('/api/latest_image_from_vilnius', async (req, res) => {
     res.json({image});
   } catch (e) {
     console.error('latest_image_from_vilnius', e);
-    res.status(500);
+    res.sendStatus(500);
   }
 })
 
