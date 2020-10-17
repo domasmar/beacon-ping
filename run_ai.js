@@ -47,11 +47,7 @@ async function putIndicators(imagePath, destination, instances) {
     const w = width * imageWidth;
     const h = height * imageHeight;
 
-    const gradient = ctx.createLinearGradient(0, 0, imageHeight, imageWidth);
-    gradient.addColorStop(0, "magenta");
-    gradient.addColorStop(0.7 ,"blue");
-    gradient.addColorStop(1.0, "red");
-    ctx.strokeStyle = gradient
+    ctx.strokeStyle = 'rgb(57, 255, 20)'
     ctx.lineWidth = 3;
     ctx.strokeRect(x, y, w, h);
   }
