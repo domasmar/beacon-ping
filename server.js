@@ -22,7 +22,6 @@ const DB = {
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
-    imageSource: '',
     totalSpots: 42,
     takenSpots: 5,
     updatedDate: new Date().toISOString().replace('T', ' ' ).replace('Z', '').replace(/\.\d{3}$/, ''),
