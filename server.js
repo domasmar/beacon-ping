@@ -1,30 +1,42 @@
 const express = require('express')
 const app = express()
 
+// TODO use AI
 const {ai} = require('./ai');
 
-function updateDatabase(scheduleNext = true) {
+const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '')
+
+async function updateDatabase() {
+
+  Object.entries(DB).forEach(([streetSlug, data]) => {
+
+    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.5) * 5)
+
+    data.updatedDate = now();
+    data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
+  })
 
   setTimeout(() => {
     updateDatabase(true)
-  }, 10000);
+  }, 5000);
 }
-
-// updateDatabase();
+setTimeout(() => {
+  updateDatabase(true);
+}, 1000);
 
 const DB = {
   'vokieciu-1': {
     address: 'Vokieciu Gatve',
     totalSpots: 100,
     takenSpots: 23,
-    updatedDate: new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, ''),
+    updatedDate: now(),
     location: {lat: 54.679608, lng: 25.283881}
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
     totalSpots: 42,
     takenSpots: 5,
-    updatedDate: new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, ''),
+    updatedDate: now(),
     location: {lat: 54.682144, lng: 25.280008}
   }
 };
