@@ -1,13 +1,12 @@
 process.env.PUBLIC_DIR = __dirname + '/public';
 
 const {ai} = require('./src/ai');
-const {loadImage, createCanvas} = require('canvas');
+const { putIndicators } = require('./src/indicators');
 
 const toRun = [
-  'smugleviciaus/smugleviciausg_1.jpg',
-  'smugleviciaus/smugleviciausg_2.jpg',
-  'smugleviciaus/smugleviciausg_3.jpg',
-  'smugleviciaus/smugleviciausg_4.jpg'
+  'vokieciu/PXL_20201018_081516416.jpg',
+  'vokieciu/PXL_20201018_081633419.jpg',
+  'vokieciu/PXL_20201018_081636863.jpg',
 ];
 
 (async () => {
@@ -27,35 +26,3 @@ const toRun = [
   }
 })();
 
-async function putIndicators(imagePath, destination, instances) {
-  const image = await loadImage(imagePath);
-
-  const imageHeight = image.height;
-  const imageWidth = image.width;
-
-  const canvas = createCanvas(imageWidth, imageHeight);
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(image, 0, 0);
-
-  for (let i = 0; i < instances.length; i++) {
-    const {BoundingBox} = instances[i];
-    const {Width: width, Height: height, Left: left, Top: top} = BoundingBox;
-
-    const x = left * imageWidth;
-    const y = top * imageHeight;
-    const w = width * imageWidth;
-    const h = height * imageHeight;
-
-    ctx.strokeStyle = 'rgb(57, 255, 20)';
-    ctx.lineWidth = 3;
-    ctx.strokeRect(x, y, w, h);
-  }
-
-  const fs = require('fs');
-  const out = fs.createWriteStream(destination);
-  const stream = canvas.createJPEGStream();
-  stream.pipe(out);
-
-  await new Promise(resolve => out.on('finish', () => resolve()));
-
-}

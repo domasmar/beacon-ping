@@ -1,0 +1,342 @@
+{
+  "Labels": [
+    {
+      "Name": "Machine",
+      "Confidence": 99.8250732421875,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Wheel",
+      "Confidence": 99.8250732421875,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.08377231657505035,
+            "Height": 0.14143450558185577,
+            "Left": 0.779149055480957,
+            "Top": 0.6994152665138245
+          },
+          "Confidence": 99.8250732421875
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.07055691629648209,
+            "Height": 0.13408587872982025,
+            "Left": 0.6598465442657471,
+            "Top": 0.6753156781196594
+          },
+          "Confidence": 99.62158203125
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.02351929247379303,
+            "Height": 0.08210340142250061,
+            "Left": 0.6706875562667847,
+            "Top": 0.5915020704269409
+          },
+          "Confidence": 95.47504425048828
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.02382596582174301,
+            "Height": 0.02302735298871994,
+            "Left": 0.10723236948251724,
+            "Top": 0.5783447027206421
+          },
+          "Confidence": 92.5861587524414
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.04408824443817139,
+            "Height": 0.03474915400147438,
+            "Left": 0.9163682460784912,
+            "Top": 0.7235104441642761
+          },
+          "Confidence": 77.9942398071289
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.02424211986362934,
+            "Height": 0.03435179591178894,
+            "Left": 0.009434550069272518,
+            "Top": 0.5470367670059204
+          },
+          "Confidence": 75.62388610839844
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.018253780901432037,
+            "Height": 0.06213255599141121,
+            "Left": 0.2038550078868866,
+            "Top": 0.5409994125366211
+          },
+          "Confidence": 65.77587127685547
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Machine"
+        }
+      ]
+    },
+    {
+      "Name": "Transportation",
+      "Confidence": 99.81069946289062,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Bicycle",
+      "Confidence": 99.81069946289062,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.20477904379367828,
+            "Height": 0.26579323410987854,
+            "Left": 0.6572503447532654,
+            "Top": 0.574357807636261
+          },
+          "Confidence": 99.81069946289062
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Bike",
+      "Confidence": 99.81069946289062,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Vehicle",
+      "Confidence": 99.81069946289062,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Car",
+      "Confidence": 99.73890686035156,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.1534469574689865,
+            "Height": 0.21889829635620117,
+            "Left": 0.44531530141830444,
+            "Top": 0.4695894718170166
+          },
+          "Confidence": 99.73890686035156
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.16220714151859283,
+            "Height": 0.1536950320005417,
+            "Left": 0.0993850901722908,
+            "Top": 0.45073992013931274
+          },
+          "Confidence": 99.26963806152344
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.30888456106185913,
+            "Height": 0.30770590901374817,
+            "Left": 0.6672961115837097,
+            "Top": 0.448135644197464
+          },
+          "Confidence": 99.12252807617188
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.13147032260894775,
+            "Height": 0.14253202080726624,
+            "Left": 0.0017328751273453236,
+            "Top": 0.4384981393814087
+          },
+          "Confidence": 99.07325744628906
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.04731563851237297,
+            "Height": 0.030592896044254303,
+            "Left": 0.5774196982383728,
+            "Top": 0.48550039529800415
+          },
+          "Confidence": 85.19674682617188
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Automobile",
+      "Confidence": 99.73890686035156,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "License Plate",
+      "Confidence": 99.35266876220703,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.050148867070674896,
+            "Height": 0.024880053475499153,
+            "Left": 0.5062170624732971,
+            "Top": 0.6123546361923218
+          },
+          "Confidence": 99.35266876220703
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.058248262852430344,
+            "Height": 0.028367944061756134,
+            "Left": 0.8929100632667542,
+            "Top": 0.59522545337677
+          },
+          "Confidence": 99.2694091796875
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Person",
+      "Confidence": 98.68399047851562,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.11191899329423904,
+            "Height": 0.34809428453445435,
+            "Left": 0.717488169670105,
+            "Top": 0.44525808095932007
+          },
+          "Confidence": 98.68399047851562
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.017493026331067085,
+            "Height": 0.04190848022699356,
+            "Left": 0.5460537672042847,
+            "Top": 0.44492724537849426
+          },
+          "Confidence": 95.81474304199219
+        }
+      ],
+      "Parents": []
+    },
+    {
+      "Name": "Human",
+      "Confidence": 98.68399047851562,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Road",
+      "Confidence": 82.4234390258789,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Sport",
+      "Confidence": 69.40435028076172,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Person"
+        }
+      ]
+    },
+    {
+      "Name": "Cyclist",
+      "Confidence": 69.40435028076172,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Bicycle"
+        },
+        {
+          "Name": "Sport"
+        },
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Person"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Sports",
+      "Confidence": 69.40435028076172,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Person"
+        }
+      ]
+    },
+    {
+      "Name": "Tarmac",
+      "Confidence": 68.7750015258789,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Asphalt",
+      "Confidence": 68.7750015258789,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Intersection",
+      "Confidence": 59.440921783447266,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Road"
+        }
+      ]
+    }
+  ],
+  "LabelModelVersion": "2.0"
+}

@@ -3,13 +3,17 @@ const fs = require('fs');
 const {takePlayAndTakeScreenshot} = require("./screenshots/take");
 const app = express();
 const path = require('path');
+const moment = require('moment');
 
 const {ai} = require('./ai');
 
-const now = () => new Date().toISOString().replace('T', ' ').replace('Z', '').replace(/\.\d{3}$/, '');
+const now = () => moment().utcOffset(180).format('YYYY MM DD HH:mm:ss');
 
 async function updateDatabase() {
   for (const [, data] of Object.entries(DB)) {
+    if (data.real) {
+      return;
+    }
     const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5);
     data.updatedDate = now();
     if (typeof data.imageIndex !== 'undefined') {
@@ -21,7 +25,9 @@ async function updateDatabase() {
       const fromCache = JSON.parse(fs.readFileSync(cacheFile, {encoding: 'utf-8'}));
       const labelWithCar = fromCache.Labels.find(l => l.Name === 'Car');
 
-      data.takenSpots = ((labelWithCar && labelWithCar.Instances) || []).length;
+      const takenSpots = ((labelWithCar && labelWithCar.Instances) || []).filter(i => i.Confidence > data.confidence).length
+
+      data.takenSpots = takenSpots;
       data.image = generatedImage;
       data.imageIndex = nextIndex;
     } else {
@@ -41,11 +47,18 @@ setTimeout(() => {
 const DB = {
   'vokieciu-1': {
     address: 'Vokieciu Gatve',
-    totalSpots: 100,
-    takenSpots: 23,
+    totalSpots: 5,
+    takenSpots: 0,
     updatedDate: now(),
     location: {lat: 54.679608, lng: 25.283881},
-    image:'source/trinapolio-impulsas-1.jpg'
+    image: 'generated/vokieciu/PXL_20201018_081516416.jpg',
+    confidence: 90,
+    imageIndex: 0,
+    sources: [
+      'vokieciu/PXL_20201018_081516416',
+      'vokieciu/PXL_20201018_081633419',
+      'vokieciu/PXL_20201018_081636863',
+    ]
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
@@ -53,7 +66,8 @@ const DB = {
     takenSpots: 5,
     updatedDate: now(),
     location: {lat: 54.682144, lng: 25.280008},
-    image:'source/trinapolio-impulsas-1.jpg'
+    confidence: 0,
+    image: 'source/trinapolio-impulsas-1.jpg'
   },
   'opera': {
     address: 'A. Vienuolio g. 1',
@@ -62,13 +76,14 @@ const DB = {
     updatedDate: now(),
     location: {lat: 54.6881731, lng: 25.2787993},
     imageIndex: 0,
-    image: 'generated/operos-ir-baleto-aikstele-19h00m28s649.jpg',
+    confidence: 0,
+    image: 'generated/opera/operos-ir-baleto-aikstele-19h00m28s649.jpg',
     sources: [
-      'operos-ir-baleto-aikstele-19h00m28s649',
-      'operos-ir-baleto-aikstele-19h00m36s069',
-      'operos-ir-baleto-aikstele-19h00m42s741',
-      'operos-ir-baleto-aikstele-19h00m50s654',
-      'operos-ir-baleto-aikstele-19h00m57s731'
+      'opera/operos-ir-baleto-aikstele-19h00m28s649',
+      'opera/operos-ir-baleto-aikstele-19h00m36s069',
+      'opera/operos-ir-baleto-aikstele-19h00m42s741',
+      'opera/operos-ir-baleto-aikstele-19h00m50s654',
+      'opera/operos-ir-baleto-aikstele-19h00m57s731'
     ]
   },
   'smugleviciaus': {
@@ -78,6 +93,7 @@ const DB = {
     updatedDate: now(),
     location: {lat: 54.736186, lng: 25.275899},
     imageIndex: 0,
+    confidence: 0,
     image: 'generated/smugleviciaus/smugleviciausg_1.jpg',
     sources: [
       'smugleviciaus/smugleviciausg_1',
@@ -126,23 +142,45 @@ app.get('/api/refresh_rate', (req, res) => {
   res.sendStatus(200);
 });
 
+const {putIndicators} = require('./indicators');
+
 async function startProcessingRealTimeImage() {
   if (!running) return;
 
   try {
     const imageInBase64 = await takePlayAndTakeScreenshot();
+
+
+    const baseFileName = process.env.PUBLIC_DIR + '/generated/vilnius' + '-' + now();
+    const sourceFileName = baseFileName + '.png';
+    const destinationFileName = baseFileName + '-processed.jpg';
+
     const filename = await new Promise((resolve, reject) => {
-      const fileName = process.env.PUBLIC_DIR + '/generated/vilnius' + '-' + now() + '.png';
-      createdImages.push(fileName);
-      fs.writeFile(fileName, imageInBase64, 'base64', function (err) {
+      createdImages.push(sourceFileName);
+      fs.writeFile(sourceFileName, imageInBase64, 'base64', function (err) {
         if (err) reject(err);
-        else resolve(fileName);
+        else resolve(sourceFileName);
       });
     });
 
     const result = await ai(filename, false);
 
+    const labelWithCar = result.Labels.find(l => l.Name === 'Car');
+    const instances = (labelWithCar && labelWithCar.Instances) || [];
+
+    await putIndicators(sourceFileName, destinationFileName, instances, 0);
+
     createdImagesAIs.push({filename, awsResult: result});
+
+    DB['sv_jonu'] = {
+      address: 'Sv. Jono g. 13-15',
+      totalSpots: 12, // approx
+      takenSpots: instances.length,
+      updatedDate: now(),
+      location: {lat: 54.682395, lng: 25.2889421},
+      image: destinationFileName.replace(process.env.PUBLIC_DIR + '/', ''),
+      real: true
+    };
 
   } catch (e) {
     console.error(e);
