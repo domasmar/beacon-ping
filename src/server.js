@@ -70,6 +70,21 @@ const DB = {
       'operos-ir-baleto-aikstele-19h00m50s654',
       'operos-ir-baleto-aikstele-19h00m57s731'
     ]
+  },
+  'smugleviciaus': {
+    address: 'P. Smugleviciaus g. 6',
+    totalSpots: 14, // approx
+    takenSpots: 0,
+    updatedDate: now(),
+    location: {lat: 54.736186, lng: 25.275899},
+    imageIndex: 0,
+    image: 'generated/smugleviciaus/smugleviciausg_1.jpg',
+    sources: [
+      'smugleviciaus/smugleviciausg_1',
+      'smugleviciaus/smugleviciausg_2',
+      'smugleviciaus/smugleviciausg_3',
+      'smugleviciaus/smugleviciausg_4',
+    ]
   }
 };
 

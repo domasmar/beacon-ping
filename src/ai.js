@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const fs = require('fs');
 const AWS = require('aws-sdk');
@@ -38,11 +38,11 @@ async function ai(fileName, onlyCache) {
     const credentials = new AWS.Credentials({
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.AWS_ACCESS_KEY_SECRET,
-    })
+    });
 
     const rekognition = new AWS.Rekognition({credentials});
 
-    const file = fs.readFileSync(fileName)
+    const file = fs.readFileSync(fileName);
 
     const params = {
       Image: {Bytes: file},
@@ -76,7 +76,7 @@ function getFilenameWithoutFormat(fileName) {
 
 function haveInCache(filename) {
   try {
-    fs.readFileSync(cacheFile(filename), {encoding: 'utf-8'})
+    fs.readFileSync(cacheFile(filename), {encoding: 'utf-8'});
     return true;
   } catch (e) {
   }

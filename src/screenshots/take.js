@@ -4,7 +4,7 @@ const sharp = require('sharp');
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
-module.exports = {takePlayAndTakeScreenshot}
+module.exports = {takePlayAndTakeScreenshot};
 
 async function takePlayAndTakeScreenshot() {
   return new Promise(async (resolve, reject) => {

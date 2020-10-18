@@ -3,8 +3,8 @@ let visibleParkingDetails = null;
 async function initMap() {
     const availableParkings = await fetchParkings();
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 16,
-        center: {lat: 54.6781767, lng: 25.2847437},
+        zoom: 15,
+        center: {lat: 54.6881731, lng: 25.2787993},
     });
     let markers = resetMarkers(map, availableParkings);
     setInterval(async () => {
