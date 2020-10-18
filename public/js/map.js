@@ -33,12 +33,14 @@ function dropMarkers(markers) {
 
 function resetMarkers(map, availableParkings) {
     return availableParkings.map(parking => {
+        const freeSpaces = parking.totalSpots - parking.takenSpots;
+        const numberPadding = freeSpaces < 10 ? '1px 7px;' : '2px';
         const marker = new MarkerWithLabel({
             position: parking.location,
             icon: new google.maps.MarkerImage('img/logo.png', null, null, null, new google.maps.Size(39, 60)),
             labelContent:
                 '<div style="font-size: 18px; font-weight: bolder; display: flex; flex-direction:column;">' +
-                `<span style="text-align:left; color: white; background-color: green; border-radius: 50%; padding: 2px;">${parking.totalSpots - parking.takenSpots}</span>` +
+                `<span style="text-align:center; color: white; background-color: green; border-radius: 50%; padding: ${numberPadding}">${freeSpaces}</span>` +
                 '</div>',
             labelAnchor: new google.maps.Point(13, 55),
             labelClass: "labels",
