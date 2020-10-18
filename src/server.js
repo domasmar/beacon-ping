@@ -12,9 +12,8 @@ const now = () => moment().utcOffset(180).format('YYYY MM DD HH:mm:ss');
 async function updateDatabase() {
   for (const [, data] of Object.entries(DB)) {
     if (data.real) {
-      return;
+      continue;
     }
-    const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5);
     data.updatedDate = now();
     if (typeof data.imageIndex !== 'undefined') {
       const nextIndex = (data.imageIndex + 1) % data.sources.length;
@@ -31,6 +30,7 @@ async function updateDatabase() {
       data.image = generatedImage;
       data.imageIndex = nextIndex;
     } else {
+      const randomDiff = Math.floor(Math.random() * (Math.random() - 0.3) * 5);
       data.takenSpots = Math.min(Math.max(0, data.takenSpots + randomDiff), data.totalSpots);
     }
   }
