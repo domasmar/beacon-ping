@@ -110,6 +110,7 @@ const DB = {
       'smugleviciaus/smugleviciausg_2',
       'smugleviciaus/smugleviciausg_3',
       'smugleviciaus/smugleviciausg_4',
+      'smugleviciaus/smugleviciausg_5',
     ]
   }
 };
