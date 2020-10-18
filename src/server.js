@@ -46,7 +46,7 @@ setTimeout(() => {
 
 const DB = {
   'vokieciu-1': {
-    address: 'Vokieciu Gatve',
+    address: 'Vokiečių g. 11',
     totalSpots: 5,
     takenSpots: 0,
     updatedDate: now(),
@@ -62,12 +62,22 @@ const DB = {
   },
   'vilniaus_g': {
     address: 'Vilniaus g. 39',
-    totalSpots: 42,
-    takenSpots: 5,
+    totalSpots: 9,
+    takenSpots: 0,
     updatedDate: now(),
     location: {lat: 54.682144, lng: 25.280008},
     confidence: 0,
-    image: 'source/trinapolio-impulsas-1.jpg'
+    imageIndex: 0,
+    image: 'generated/vilniaus/vilniaus1.jpg',
+    sources:[
+      'vilniaus/vilniaus1',
+      'vilniaus/vilniaus2',
+      'vilniaus/vilniaus3',
+      'vilniaus/vilniaus4',
+      'vilniaus/vilniaus5',
+      'vilniaus/vilniaus6',
+      'vilniaus/vilniaus7',
+    ]
   },
   'opera': {
     address: 'A. Vienuolio g. 1',

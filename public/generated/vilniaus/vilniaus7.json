@@ -1,0 +1,355 @@
+{
+  "Labels": [
+    {
+      "Name": "Automobile",
+      "Confidence": 99.51901245117188,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Car",
+      "Confidence": 99.51901245117188,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.21642491221427917,
+            "Height": 0.20444856584072113,
+            "Left": 0.3679673969745636,
+            "Top": 0.5861304998397827
+          },
+          "Confidence": 99.51901245117188
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.17304280400276184,
+            "Height": 0.25010940432548523,
+            "Left": 0.6760081648826599,
+            "Top": 0.593737781047821
+          },
+          "Confidence": 99.3650894165039
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Vehicle",
+      "Confidence": 99.51901245117188,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Transportation",
+      "Confidence": 99.51901245117188,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Asphalt",
+      "Confidence": 98.4366683959961,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Tarmac",
+      "Confidence": 98.4366683959961,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Tire",
+      "Confidence": 91.72547912597656,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Road",
+      "Confidence": 90.4751205444336,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Urban",
+      "Confidence": 86.18722534179688,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Building",
+      "Confidence": 86.18722534179688,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Suburb",
+      "Confidence": 86.18722534179688,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Urban"
+        },
+        {
+          "Name": "Building"
+        }
+      ]
+    },
+    {
+      "Name": "Machine",
+      "Confidence": 84.7220687866211,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Wheel",
+      "Confidence": 84.27766418457031,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.03178577497601509,
+            "Height": 0.09600412100553513,
+            "Left": 0.4871661067008972,
+            "Top": 0.6956294775009155
+          },
+          "Confidence": 70.49189758300781
+        },
+        {
+          "BoundingBox": {
+            "Width": 0.022932816296815872,
+            "Height": 0.06520001590251923,
+            "Left": 0.5569877624511719,
+            "Top": 0.6640203595161438
+          },
+          "Confidence": 60.12860870361328
+        }
+      ],
+      "Parents": [
+        {
+          "Name": "Machine"
+        }
+      ]
+    },
+    {
+      "Name": "Spoke",
+      "Confidence": 83.72081756591797,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Machine"
+        }
+      ]
+    },
+    {
+      "Name": "Car Wheel",
+      "Confidence": 83.59794616699219,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Tire"
+        },
+        {
+          "Name": "Wheel"
+        },
+        {
+          "Name": "Machine"
+        }
+      ]
+    },
+    {
+      "Name": "Tree",
+      "Confidence": 76.97051239013672,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Plant"
+        }
+      ]
+    },
+    {
+      "Name": "Plant",
+      "Confidence": 76.97051239013672,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Alloy Wheel",
+      "Confidence": 69.59143829345703,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Spoke"
+        },
+        {
+          "Name": "Wheel"
+        },
+        {
+          "Name": "Machine"
+        }
+      ]
+    },
+    {
+      "Name": "Person",
+      "Confidence": 67.06661224365234,
+      "Instances": [
+        {
+          "BoundingBox": {
+            "Width": 0.011128743179142475,
+            "Height": 0.05802216753363609,
+            "Left": 0.15059064328670502,
+            "Top": 0.5606478452682495
+          },
+          "Confidence": 67.06661224365234
+        }
+      ],
+      "Parents": []
+    },
+    {
+      "Name": "Human",
+      "Confidence": 67.06661224365234,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Apparel",
+      "Confidence": 61.430389404296875,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Clothing",
+      "Confidence": 61.430389404296875,
+      "Instances": [],
+      "Parents": []
+    },
+    {
+      "Name": "Freeway",
+      "Confidence": 61.41221237182617,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Road"
+        }
+      ]
+    },
+    {
+      "Name": "Sports Car",
+      "Confidence": 58.14805603027344,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Car"
+        },
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Coupe",
+      "Confidence": 57.76197052001953,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Sports Car"
+        },
+        {
+          "Name": "Car"
+        },
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Parking",
+      "Confidence": 56.990989685058594,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Car"
+        },
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Parking Lot",
+      "Confidence": 56.990989685058594,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Car"
+        },
+        {
+          "Name": "Vehicle"
+        },
+        {
+          "Name": "Transportation"
+        }
+      ]
+    },
+    {
+      "Name": "Abies",
+      "Confidence": 56.33911895751953,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Tree"
+        },
+        {
+          "Name": "Plant"
+        }
+      ]
+    },
+    {
+      "Name": "Fir",
+      "Confidence": 56.33911895751953,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Tree"
+        },
+        {
+          "Name": "Plant"
+        }
+      ]
+    },
+    {
+      "Name": "Intersection",
+      "Confidence": 55.33421325683594,
+      "Instances": [],
+      "Parents": [
+        {
+          "Name": "Road"
+        }
+      ]
+    }
+  ],
+  "LabelModelVersion": "2.0"
+}
