@@ -4,9 +4,7 @@ const {ai} = require('./src/ai');
 const { putIndicators } = require('./src/indicators');
 
 const toRun = [
-  'vokieciu/PXL_20201018_081516416.jpg',
-  'vokieciu/PXL_20201018_081633419.jpg',
-  'vokieciu/PXL_20201018_081636863.jpg',
+  'smugleviciaus/smugleviciausg_5.jpg',
 ];
 
 (async () => {
