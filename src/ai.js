@@ -6,6 +6,7 @@ const {last} = require('lodash');
 
 module.exports = {ai};
 
+
 async function ai(fileName, onlyCache) {
   if (onlyCache) {
     console.log(`[${fileName}] Searching in cache`);
